@@ -4,6 +4,7 @@
 # Time: 10/26/22 16:14
 
 
+from cgitb import handler
 from matplotlib.pylab import datestr2num
 import matplotlib.pyplot as plt
 import matplotlib
@@ -31,8 +32,8 @@ Cheng2020_with_checkboard_1M_y= [27.929280281951396, 29.62191615655722, 31.76089
 Cheng2020_x= [0.0976793248945148, 0.17349683544303807, 0.29941983122362875, 0.4566587552742617, 0.6791666666666669, 0.8288238396624475]
 Cheng2020_y= [28.00463735856056, 29.923344462993875, 32.05073270265257, 34.183917640511964, 36.038861064737524, 37.10545353366722]
 
-JPEG_x= [0.31722046413502103, 0.49522679324894525, 0.49522679324894525, 0.40952004219409294, 0.6000527426160339, 0.7088343881856541, 0.8367352320675108]
-JPEG_y= [26.619226488592098, 29.21035058430718, 29.198757187905766, 28.15535151177889, 30.265349656835465, 31.146447783342605, 32.073919495455385]
+JPEG_x= [0.31722046413502103, 0.40952004219409294, 0.49522679324894525, 0.6000527426160339, 0.7088343881856541, 0.8367352320675108]
+JPEG_y= [26.619226488592098,  28.15535151177889, 29.198757187905766, 30.265349656835465, 31.146447783342605, 32.073919495455385]
 
 Minnen_2018_with_checkerboard_x= [0.10822784810126586, 0.18305643459915616, 0.32645042194092844, 0.4892932489451478, 0.7118011603375528, 0.8759625527426167]
 Minnen_2018_with_checkerboard_y= [27.616258579113335, 29.442218512335373, 31.7377109998145, 33.85350584307179, 35.91133370432202, 37.26196438508625]
@@ -53,34 +54,35 @@ plt.grid(linestyle = '--', linewidth =1)
 linewidth = 1
 markeredgewidth = 1
 markersize = '10'
-plt.plot(Balle2018_x, Balle2018_y, 'orange', label = 'Ballé2018', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+colors = ["#00a8e1", "#99cc00", "#e30039", "#fcd300", "#800080", "#00994e", "#ff6600", "#808000", "#db00c2", "#008080", "#0000ff ", "#c8cc00"]
+l0, =plt.plot(Balle2018_x, Balle2018_y, color=colors[0], label = 'Ballé2018', linewidth=linewidth, linestyle = '-' , markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(BPG_x, BPG_y, 'orange', label = 'BPG (4:4:4)', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+l1, =plt.plot(BPG_x, BPG_y, color=colors[1], label = 'BPG (4:4:4)', linewidth=linewidth, linestyle = '-' , markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(Cheng_2020_with_checkerboard_x, Cheng_2020_with_checkerboard_y, 'forestgreen', label = 'Cheng2020 with checkerboard, 6M steps', linewidth=linewidth, linestyle = '-', marker='o', markerfacecolor='none'
+l2, =plt.plot(Cheng_2020_with_checkerboard_x, Cheng_2020_with_checkerboard_y, color=colors[2], label = 'Cheng2020 with checkerboard, 6M steps', linewidth=linewidth, linestyle = '-', markerfacecolor='none'
         ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(Cheng2020_with_checkboard_1M_x, Cheng2020_with_checkboard_1M_y, 'steelblue', label = 'Cheng2020 with checkerboard, 1M steps', linewidth=linewidth, linestyle = '-', marker='s', markerfacecolor='none'
+l3, =plt.plot(Cheng2020_with_checkboard_1M_x, Cheng2020_with_checkboard_1M_y, color=colors[3], label = 'Cheng2020 with checkerboard, 1M steps', linewidth=linewidth, linestyle = '-', markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(Cheng2020_x, Cheng2020_y, 'orange', label = 'Cheng2020', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+l4, =plt.plot(Cheng2020_x, Cheng2020_y, color=colors[4], label = 'Cheng2020', linewidth=linewidth, linestyle = '-', markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(JPEG_x, JPEG_y, 'orange', label = 'JPEG', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+l5, =plt.plot(JPEG_x, JPEG_y, color=colors[5], label = 'JPEG', linewidth=linewidth, linestyle = '-', markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(Minnen_2018_with_checkerboard_x, Minnen_2018_with_checkerboard_y, 'orange', label = 'Minnen2018 with checkerboard', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+l6, =plt.plot(Minnen_2018_with_checkerboard_x, Minnen_2018_with_checkerboard_y, color=colors[6], label = 'Minnen2018 with checkerboard', linewidth=linewidth, linestyle = '-' , markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(Minnen_2020_cc10_x, Minnen_2020_cc10_y, 'orange', label = 'Minnen2020, cc10', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+l7, =plt.plot(Minnen_2020_cc10_x, Minnen_2020_cc10_y, color=colors[7], label = 'Minnen2020, cc10', linewidth=linewidth, linestyle = '-' , markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(Minnen2018_w_o_context_x, Minnen2018_w_o_context_y, 'orange', label = 'Minnen2018 w/o context', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+l8, = plt.plot(Minnen2018_w_o_context_x, Minnen2018_w_o_context_y, color=colors[8], label = 'Minnen2018 w/o context', linewidth=linewidth, linestyle = '-' , markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(Minnen2018_x, Minnen2018_y, 'orange', label = 'Minnen2018', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+l9, =plt.plot(Minnen2018_x, Minnen2018_y, color=colors[9], label = 'Minnen2018', linewidth=linewidth, linestyle = '-' , markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
 
@@ -88,11 +90,12 @@ plt.xlabel('Bits Per Pixel (BPP)', fontdict=font)
 plt.ylabel('PSNR', fontdict=font)
 plt.xticks(fontsize=fontsize, fontweight='bold')
 plt.yticks(fontsize=fontsize, fontweight='bold')
-plt.legend(fontsize=fontsize)
+plt.legend(fontsize=fontsize-2, handles=[l0, l1, l2, l3, l4, l5, l6, l7, l8, l9,], loc='best')
 plt.tick_params(top=False,bottom=True,left=True,right=False, width=2)
-# plt.ylim((0.3, 1.5))
+plt.ylim((26, 40))
 plt.tight_layout()
 plt.savefig("kodak_mse.pdf")
+# plt.show()
 
 
 
