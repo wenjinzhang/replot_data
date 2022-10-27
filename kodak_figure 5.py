@@ -51,10 +51,25 @@ plt.grid(linestyle = '--', linewidth =1)
 linewidth = 1
 markeredgewidth = 1
 markersize = '10'
-plt.plot(_x, _y, 'orange', label = 'jpeg', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+plt.plot(BPG_x, BPG_y, 'orange', label = 'BPG (4:4:4)', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(_x, _y, 'orange', label = 'jpeg', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+plt.plot(Entroformer_x, Entroformer_y, 'orange', label = 'Entroformer: Context+Hyperprior', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+         ,markeredgewidth=markeredgewidth, markersize=markersize)
+
+plt.plot(JPEG_x, JPEG_y, 'orange', label = 'JPEG (4:2:0)', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+         ,markeredgewidth=markeredgewidth, markersize=markersize)
+
+plt.plot(JPEG2000_x, JPEG2000_y, 'orange', label = 'JPEG2000 (OpenJPEG)', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+         ,markeredgewidth=markeredgewidth, markersize=markersize)
+
+plt.plot(Lee_x, Lee_y, 'orange', label = 'Lee (2019) Context-Adaptive', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+         ,markeredgewidth=markeredgewidth, markersize=markersize)
+
+plt.plot(Minnen_x, Minnen_y, 'orange', label = 'Minnen (2018) Context+Hyperprior', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+         ,markeredgewidth=markeredgewidth, markersize=markersize)
+
+plt.plot(Qian_x, Qian_y, 'orange', label = 'Qian (2021) Reference', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
 
@@ -67,7 +82,7 @@ plt.legend(fontsize=fontsize)
 plt.tick_params(top=False,bottom=True,left=True,right=False, width=2)
 # plt.ylim((0.3, 1.5))
 plt.tight_layout()
-plt.savefig("kodak_mse.pdf")
+plt.savefig("kodak_mse_5.pdf")
 
 
 

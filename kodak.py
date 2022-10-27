@@ -19,13 +19,7 @@ rcParams['font.sans-serif']=['Times New Roman']
 rcParams['font.weight']='bold'
 
 fig = plt.figure(figsize=(12, 10))
-# x_jpeg = [1.3, 2.1, 2.5, 3.0, 3.6, 4.1, 4.8, 5.15, 5.7, 6.3]
-# x_minnen2018 = [1.3, 2.1, 2.5, 3.0, 3.57, 4.1, 4.8, 5.13, 5.8, 6.45]
-# x_cheng2020 = []
 
-# y_jpeg = [5.08, 5.25, 5.36, 5.51, 5.68, 5.78, 5.84, 5.91, 5.99, 6.11]
-# y_minnen2018 = [4.4, 4.61, 4.88, 5.21, 5.45, 5.51, 5.69, 5.75, 5.86, 5.95]
-# y_cheng2020 = []
 Balle2018_x= [0.11515031645569625, 0.18503428270042205, 0.30139767932489464, 0.46819620253164573, 0.6864187763713082, 0.8881592827004222]
 Balle2018_y= [27.065572250046372, 28.71763123724726, 30.75227230569467, 32.781116675941384, 34.92589501020219, 36.54317380819885]
 BPG_x= [0.0821861814345992, 0.19393459915611821, 0.3040348101265824, 0.47347046413502125, 0.6831223628691986, 0.867721518987342]
@@ -59,34 +53,34 @@ plt.grid(linestyle = '--', linewidth =1)
 linewidth = 1
 markeredgewidth = 1
 markersize = '10'
-plt.plot(Balle2018_x, Balle2018_y, 'orange', label = 'jpeg', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+plt.plot(Balle2018_x, Balle2018_y, 'orange', label = 'Ballé2018', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(BPG_x, BPG_y, 'orange', label = 'jpeg', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+plt.plot(BPG_x, BPG_y, 'orange', label = 'BPG (4:4:4)', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(Cheng_2020_with_checkerboard_x, Cheng_2020_with_checkerboard_y, 'forestgreen', label = 'minnen2018', linewidth=linewidth, linestyle = '-', marker='o', markerfacecolor='none'
+plt.plot(Cheng_2020_with_checkerboard_x, Cheng_2020_with_checkerboard_y, 'forestgreen', label = 'Cheng2020 with checkerboard, 6M steps', linewidth=linewidth, linestyle = '-', marker='o', markerfacecolor='none'
         ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(Cheng2020_with_checkboard_1M_x, Cheng2020_with_checkboard_1M_y, 'steelblue', label = 'cheng2020', linewidth=linewidth, linestyle = '-', marker='s', markerfacecolor='none'
+plt.plot(Cheng2020_with_checkboard_1M_x, Cheng2020_with_checkboard_1M_y, 'steelblue', label = 'Cheng2020 with checkerboard, 1M steps', linewidth=linewidth, linestyle = '-', marker='s', markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(Cheng2020_x, Cheng2020_y, 'orange', label = 'jpeg', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+plt.plot(Cheng2020_x, Cheng2020_y, 'orange', label = 'Cheng2020', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(JPEG_x, JPEG_y, 'orange', label = 'jpeg', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+plt.plot(JPEG_x, JPEG_y, 'orange', label = 'JPEG', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(Minnen_2018_with_checkerboard_x, Minnen_2018_with_checkerboard_y, 'orange', label = 'jpeg', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+plt.plot(Minnen_2018_with_checkerboard_x, Minnen_2018_with_checkerboard_y, 'orange', label = 'Minnen2018 with checkerboard', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(Minnen_2020_cc10_x, Minnen_2020_cc10_y, 'orange', label = 'jpeg', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+plt.plot(Minnen_2020_cc10_x, Minnen_2020_cc10_y, 'orange', label = 'Minnen2020, cc10', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(Minnen2018_w_o_context_x, Minnen2018_w_o_context_y, 'orange', label = 'jpeg', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+plt.plot(Minnen2018_w_o_context_x, Minnen2018_w_o_context_y, 'orange', label = 'Minnen2018 w/o context', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(Minnen2018_x, Minnen2018_y, 'orange', label = 'jpeg', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+plt.plot(Minnen2018_x, Minnen2018_y, 'orange', label = 'Minnen2018', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
 

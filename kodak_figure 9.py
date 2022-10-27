@@ -41,10 +41,10 @@ plt.grid(linestyle = '--', linewidth =1)
 linewidth = 1
 markeredgewidth = 1
 markersize = '10'
-plt.plot(Cheng_2020_1M_steps_x, Cheng_2020_1M_steps_y, 'orange', label = 'jpeg', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+plt.plot(Cheng_2020_1M_steps_x, Cheng_2020_1M_steps_y, 'orange', label = 'Cheng2020, 1M steps (reproduction)', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
-plt.plot(Minnen2018_reproduction_x, Minnen2018_reproduction_y, 'orange', label = 'jpeg', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
+plt.plot(Minnen2018_reproduction_x, Minnen2018_reproduction_y, 'orange', label = 'Minnen2018 (reproduction)', linewidth=linewidth, linestyle = '-', marker='^', markerfacecolor='none'
          ,markeredgewidth=markeredgewidth, markersize=markersize)
 
 
@@ -57,7 +57,7 @@ plt.legend(fontsize=fontsize)
 plt.tick_params(top=False,bottom=True,left=True,right=False, width=2)
 # plt.ylim((0.3, 1.5))
 plt.tight_layout()
-plt.savefig("kodak_mse.pdf")
+plt.savefig("kodak_mse_9.pdf")
 
 
 
