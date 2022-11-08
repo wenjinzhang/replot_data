@@ -1,5 +1,5 @@
 import os, csv
-path = "./figure_6c"
+path = "./figure_12"
 
 file_list = os.listdir(path)
 
